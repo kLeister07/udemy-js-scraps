@@ -15,3 +15,22 @@ function bmiCalculator(weight, height) {
 console.log(bmiCalculator(65, 1.8));
 
 
+//Love Match Calculator
+var you= prompt("Enter your name.");
+var love= prompt("Enter your love interest.");
+function loveMatch() {
+    var n= Math.random();
+    if (you=="Kevin Leister", love=="Ariana Grande") {
+        n=100;
+        return n;
+    } else {
+        
+    n= Math.floor(n * 101);
+    return n;
+    }
+}
+
+alert(you + " and " + love + " are a " + loveMatch() + "% match.");
+
+
+//
