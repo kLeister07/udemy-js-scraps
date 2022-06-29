@@ -85,25 +85,33 @@ var output = [];
 var count = 1;
 
 function fizzBuzz() {
-    if (count % 3 == 0 && count % 5 == 0) {
-        output.push("fizzBuzz");
-        plusLog();
-    } else if (count % 3 == 0) {
-        output.push("fizz");
-        plusLog();
-    } else if (count % 5 == 0) {
-        output.push("buzz");
-        plusLog();
-    } else {
-        output.push(count);
-        plusLog();
+    while (count <= 100) {
+        if (count % 3 == 0 && count % 5 == 0) {
+            output.push("FizzBuzz");
+        } else if (count % 3 == 0) {
+            output.push("Fizz");
+        } else if (count % 5 == 0) {
+            output.push("Buzz");
+        } else {
+            output.push(count);
+        }
+        count++;
     }
-}
-
-function plusLog() {
-    count++;
     console.log(output);
 }
+
+
+
+//Who is Buying Lunch
+function whosPaying(names) {
+
+    var numberOfPeople = names.length;
+    var randomPersonPosition = Math.floor(numberOfPeople * Math.random());
+    var whoPays = names[randomPersonPosition];
+    return whoPays + " is going to buy lunch today!";
+}
+
+whosPaying(["Kevin", "Aubree", "Khloe", "Noah", "Aj", "Lorena", "Arlo"]);
 
 
 
