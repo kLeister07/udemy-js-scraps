@@ -7,6 +7,7 @@ var daysLeft= (yearsLeft * 365);
 console.log("You have " + daysLeft + " days, " + weeksLeft + " weeks, and " + monthsLeft + " months left until 90 years old.");
 
 
+
 // BMI calculator
 function bmiCalculator(weight, height) {
     var bmi=Math.floor(weight / (height * height))
@@ -28,6 +29,7 @@ function bmiCalculator (weight, height) {
 }
 
 
+
 //Love Match Calculator
 var you= prompt("Enter your name.");
 var love= prompt("Enter your love interest.");
@@ -46,4 +48,18 @@ function loveMatch() {
 alert(you + " and " + love + " are a " + loveMatch() + "% match.");
 
 
-//
+
+//Leap Year Calculator
+function isLeap(year) {
+  
+    if (year % 4==0 || year % 400==0 && year % 100!==0){
+        return "Leap year."
+    } else {
+        return "Not leap year."
+    }
+    }
+    console.log(isLeap(1989));
+    
+
+
+    //
