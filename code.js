@@ -115,4 +115,47 @@ whosPaying(["Kevin", "Aubree", "Khloe", "Noah", "Aj", "Lorena", "Arlo"]);
 
 
 
-//
+//99 Bottles of Beer on the Wall
+var beer = 99;
+
+function onTheWall() {
+    while (beer > 0) {
+        if (beer > 2) {
+            console.log(beer + " bottles of beer on the wall, " + beer + " bottles of beer.");
+            beer--;
+            console.log(" Take one down and pass it around, " + beer + " bottles of beer on the wall.");
+        } else if (beer == 2) {
+            console.log(beer + " bottles of beer on the wall, " + beer + " bottles of beer.");
+            beer--;
+            console.log(" Take one down and pass it around, " + beer + " bottle of beer on the wall.");
+        } else {
+            console.log("1 bottle of beer on the wall, 1 bottle of beer. Take one down and pass it around, no more bottles of beer on the wall.");
+            beer--;
+        }
+    }
+    console.log("No more bottles of beer on the wall, no more bottles of beer. Go to the store and buy some more, 99 bottles of beer on the wall.");
+}
+
+//99 bottles v2
+var beer = 99
+var onWall = " of beer on the wall. "
+var ofBeer = " of beer."
+var takeOne = "Take one down, pass it around."
+var noMore = "No more"
+var goToStore = " Go to the store and buy some more, 99 bottles of beer on the wall."
+
+while (beer > 0) {
+    var bottleWord = " bottles";
+    if (beer === 1) {
+        bottleWord = " bottle";
+    }
+    console.log(beer + bottleWord + onWall + beer + bottleWord + ofBeer);
+    console.log(takeOne);
+    beer--;
+    console.log(beer + bottleWord + onWall);
+
+    if (beer === 0) {
+        bottleWord = " bottles";
+        console.log(noMore + bottleWord + onWall + noMore + bottleWord + ofBeer + goToStore);
+    }
+}
